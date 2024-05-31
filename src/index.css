@@ -17,9 +17,9 @@
   --primary-dark: #232323;
 }
 @media (min-width: 1024px) and (max-width: 1400px) {
-  .padding-container {
+  /* .padding-container {
     padding-inline: calc(40px + 1vw) !important;
-  }
+  } */
   .row > * {
     padding-inline: 0 !important;
   }

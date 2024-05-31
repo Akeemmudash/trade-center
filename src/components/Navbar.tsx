@@ -41,13 +41,13 @@ const Navbar = () => {
   return (
     <nav className="nav bg-bright-red position-sticky top-0 z-3">
       <motion.div
-        className="padding-container container-xxl d-flex justify-content-between align-items-center flex-wrap"
+        className="container d-flex justify-content-between align-items-center flex-wrap"
         transition={{ duration: 0.6, staggerChildren: 0.1 }}
         initial="initial"
         animate="animate"
       >
         <Logo />
-        <div className="d-none d-sm-flex ">
+        <div className="d-none d-md-flex ">
           <ul className="list-unstyled d-flex align-items-center mb-0">
             <motion.li
               variants={slideDownVariants}
@@ -79,9 +79,12 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="hamburger-container d-sm-none">
+        <motion.div
+          className="hamburger-container d-md-none"
+          animate={isOpen ? "open" : "closed"}
+        >
           <MenuToggle toggle={() => toggleOpen()} />
-        </div>
+        </motion.div>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
@@ -90,7 +93,7 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             variants={ulVariants}
-            className="list-unstyled d-flex align-items-center mb-0 flex-column mt-5 justify-content-center w-100"
+            className="list-unstyled d-flex align-items-center mb-0 flex-column mt-5 justify-content-center w-100 d-md-none"
           >
             <motion.li
               className="mb-3"

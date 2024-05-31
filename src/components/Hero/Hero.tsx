@@ -15,29 +15,32 @@ const itemVariants = {
 };
 const Hero = () => {
   return (
-    <section className="hero position-relative">
-      <div className="padding-container container-xxl d-flex  h-100 mx-auto ">
-        <motion.header
-          className="header col-5"
-          transition={{ staggerChildren: 0.3 }}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1 className="fs-1 fw-bold" variants={itemVariants}>
-            Get{" "}
-            <span className="text-bright-red">Wholesale Prices Without</span>{" "}
-            Buying Wholesale <span className="text-bright-red">Quantities</span>
-          </motion.h1>
-          <motion.p className="fw-medium fs-5" variants={itemVariants}>
-            Join our community and unlock access to wholesale prices on everyday
-            essentials through shared bulk purchases.
-          </motion.p>
-          <motion.div className="" variants={itemVariants}>
-            <Button icon={<CartIcon />}>Start Shopping</Button>
-          </motion.div>
-        </motion.header>
+    <section className="hero ">
+      <div className="padding-container container row  h-100 mx-auto ">
+        <div className="col-12 col-xl-6 h-100">
+          <motion.header
+            className="header "
+            transition={{ staggerChildren: 0.3 }}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 className="fw-bold" variants={itemVariants}>
+              Get{" "}
+              <span className="text-bright-red">Wholesale Prices Without</span>{" "}
+              Buying Wholesale{" "}
+              <span className="text-bright-red">Quantities</span>
+            </motion.h1>
+            <motion.p className="fw-medium fs-5 mt-4" variants={itemVariants}>
+              Join our community and unlock access to wholesale prices on
+              everyday essentials through shared bulk purchases.
+            </motion.p>
+            <motion.div className="mt-4" variants={itemVariants}>
+              <Button icon={<CartIcon />}>Start Shopping</Button>
+            </motion.div>
+          </motion.header>
+        </div>
         <motion.div
-          className="hero_img  col-7"
+          className=" col-xl-6 col-12 d-none position-relative  d-lg-block"
           initial={{ translateX: 400, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1 }}
           transition={{
@@ -45,29 +48,33 @@ const Hero = () => {
             ease: "linear",
           }}
         >
-          <img
-            src={heroMale}
-            alt="hero image"
-            className="position-absolute bottom-0"
-          />
-          <img
-            src={heroFemale}
-            alt="hero image"
-            className="position-absolute bottom-0 start-"
-          />
+          <div className="hero_img">
+            <img
+              src={heroMale}
+              alt="hero image"
+              className="position-absolute "
+            />
+            <img
+              src={heroFemale}
+              alt="hero image"
+              className="position-absolute  "
+            />
+          </div>
+          {
+            <div className="hero_wave">
+              <img
+                src={brightSvg}
+                alt=""
+                className="position-absolute top-0 end-0 h-100 z-n1 "
+              />
+              <img
+                src={darkSvg}
+                alt=""
+                className="position-absolute top-0 end-0 h-100 z-n1 "
+              />
+            </div>
+          }
         </motion.div>
-      </div>
-      <div className="hero_wave">
-        <img
-          src={brightSvg}
-          alt=""
-          className="position-absolute top-0 end-0 h-100 z-n1 "
-        />
-        <img
-          src={darkSvg}
-          alt=""
-          className="position-absolute top-0 end-0 h-100 z-n1 "
-        />
       </div>
     </section>
   );

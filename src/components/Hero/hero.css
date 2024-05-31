@@ -1,39 +1,93 @@
 .hero {
-  height: calc(100dvh - 114px);
-  max-height: 600px;
+  height: auto;
   width: 100%;
   min-height: 460px;
   overflow: hidden;
   position: relative;
 }
+.hero h1 {
+  font-size: 50px;
+}
 
-.hero .header {
-  min-width: 446px;
-  margin-top: 100px;
-}
-.hero_wave {
-  aspect-ratio: 1241/686;
-}
-.hero_wave img {
-  object-fit: contain;
-  object-position: right top;
-  min-height: 600px;
-}
-.hero_img img {
-  width: 460px;
-}
-@media screen and (min-width: 1200px) {
-  .hero_wave img {
-    transform: scaleX(0.93) translateX(8%);
-  }
-  /* .hero_img {
-    position: relative;
-  } */
-}
 .hero_img img:first-child {
-  right: 223px;
+  right: calc(130px - 1vw);
   z-index: 1;
 }
 .hero_img img:nth-child(2) {
-  right: 0;
+  right: calc(-50px - 1vw);
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: calc(100dvh - 114px);
+    max-height: 600px;
+    width: 100%;
+    min-height: 460px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero .header {
+    max-width: 446px;
+  }
+}
+.hero .header {
+  margin-top: 150px;
+  height: calc(100dvh - 114px - 150px);
+}
+
+.hero .header .hero_wave {
+  /* aspect-ratio: 1241/686; */
+}
+.hero_wave img {
+  object-fit: scale-down;
+  object-position: right top;
+  min-height: 600px;
+}
+.hero_img {
+  min-height: 550px;
+  height: 100%;
+  position: relative;
+}
+.hero_img > img {
+  height: 85%;
+  object-position: bottom center;
+  bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .hero_wave img {
+    transform: translateX(calc(300px - 7vw));
+    object-position: top right;
+    aspect-ratio: 1241/686;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero .header {
+    margin-inline: auto;
+  }
+  .hero_wave img {
+    left: 0;
+  }
+  .hero_wave img:first-of-type {
+    transform: translateX(-110px);
+  }
+
+  .hero_img {
+    min-height: 651px;
+    height: calc(100dvh - 114px);
+    position: relative;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero_img img:nth-child(2) {
+    right: calc(-104px - 1vw);
+  }
+  .hero_img img:first-child {
+    right: calc(59px - 1vw);
+    z-index: 1;
+  }
+  .hero_img > img {
+    height: 67%;
+  }
 }
