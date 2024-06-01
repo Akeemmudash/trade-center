@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   endDate.setDate(endDate.getDate() + 7);
   return (
     <motion.section
-      className="featured-product padding-container"
+      className="featured-product container"
       transition={{ staggerChildren: 0.3 }}
       initial="hidden"
       whileInView="visible"
@@ -24,51 +24,60 @@ const FeaturedProducts = () => {
       <motion.h2 variants={itemVariants} className="section_heading">
         Featured Products
       </motion.h2>
-      <div className="section_body d-flex gap-2 justify-content-between">
-        <FeaturedProductsCard
-          cardImg={fmcgs}
-          saleType={"Summer Sale"}
-          bgColor="bg-primary-dark"
-          title={"FMCGS"}
-        >
-          <p className="fs-7">
-            Up to <span className="text-bright-red">64% OFF</span>
-          </p>
-        </FeaturedProductsCard>
-        <FeaturedProductsCard
-          className="text-white bg-red"
-          cardImg={farmProduce}
-          saleType="Best Deals"
-          title="Farm Produce"
-          buttonColor="white"
-        >
-          <Countdown endDate={endDate} />
-        </FeaturedProductsCard>
-        <FeaturedProductsCard
-          cardImg={gadgets}
-          saleType="85% VAT free"
-          title="Gadgets"
-          className="text-primary-dark"
-        >
-          <p className="fs-7">
-            Started at{" "}
-            <span className="text-bright-red fw-semibold">
-              {formatInUSD(78)}
-            </span>
-          </p>
-        </FeaturedProductsCard>
-        <FeaturedProductsCard
-          cardImg={construction}
-          saleType="85% VAT free"
-          title="Construction"
-        >
-          <p className="fs-7">
-            Started at{" "}
-            <span className="text-bright-red fw-semibold">
-              {formatInUSD(78)}
-            </span>
-          </p>
-        </FeaturedProductsCard>
+
+      <div className="section_body row">
+        <div className=" col-lg-3 col-sm-6 col-10 mx-auto">
+          <FeaturedProductsCard
+            cardImg={fmcgs}
+            saleType={"Summer Sale"}
+            bgColor="bg-primary-dark"
+            title={"FMCGS"}
+          >
+            <p className="fs-7">
+              Up to <span className="text-bright-red">64% OFF</span>
+            </p>
+          </FeaturedProductsCard>
+        </div>
+        <div className=" col-lg-3 col-sm-6 col-10 mx-auto">
+          <FeaturedProductsCard
+            className="text-white bg-red"
+            cardImg={farmProduce}
+            saleType="Best Deals"
+            title="Farm Produce"
+            buttonColor="white"
+          >
+            <Countdown endDate={endDate} />
+          </FeaturedProductsCard>
+        </div>
+        <div className=" col-lg-3 col-sm-6 col-10 mx-auto">
+          <FeaturedProductsCard
+            cardImg={gadgets}
+            saleType="85% VAT free"
+            title="Gadgets"
+            className="text-primary-dark"
+          >
+            <p className="fs-7">
+              Started at{" "}
+              <span className="text-bright-red fw-semibold">
+                {formatInUSD(78)}
+              </span>
+            </p>
+          </FeaturedProductsCard>
+        </div>
+        <div className=" col-lg-3 col-sm-6 col-10 mx-auto">
+          <FeaturedProductsCard
+            cardImg={construction}
+            saleType="85% VAT free"
+            title="Construction"
+          >
+            <p className="fs-7">
+              Started at{" "}
+              <span className="text-bright-red fw-semibold">
+                {formatInUSD(78)}
+              </span>
+            </p>
+          </FeaturedProductsCard>
+        </div>
       </div>
     </motion.section>
   );

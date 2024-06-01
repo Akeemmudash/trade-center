@@ -24,11 +24,11 @@ const TrustedBy = () => {
   return (
     <section className="trusted_by">
       <motion.div
-        className="padding-container container-xxl"
+        className="container"
         transition={{ staggerChildren: 0.3 }}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.3, once: true }}
+        viewport={{ amount: 0.9, once: true }}
       >
         <motion.h2 variants={itemVariants} className="section_heading">
           We Are Trusted by{" "}

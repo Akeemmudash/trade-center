@@ -39,99 +39,108 @@ const Navbar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <nav className="nav bg-bright-red position-sticky top-0 z-3">
-      <motion.div
-        className="container d-flex justify-content-between align-items-center flex-wrap"
-        transition={{ duration: 0.6, staggerChildren: 0.1 }}
-        initial="initial"
-        animate="animate"
-      >
-        <Logo />
-        <div className="d-none d-md-flex ">
-          <ul className="list-unstyled d-flex align-items-center mb-0">
-            <motion.li
-              variants={slideDownVariants}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Link to="about" className="text-white text-decoration-none p-3">
-                About us
-              </Link>
-            </motion.li>
-            <motion.li
-              variants={slideDownVariants}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Link
-                to="products"
-                className="text-white text-decoration-none p-3"
-              >
-                Products
-              </Link>
-            </motion.li>
-            <motion.li
-              variants={slideDownVariants}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Button color="white" className="ms-3 fs-7" icon={<CartIcon />}>
-                Shop Products
-              </Button>
-            </motion.li>
-          </ul>
-        </div>
-
+    <>
+      <div className="w-100" style={{ height: "114px" }}></div>
+      <nav className="nav bg-bright-red position-fixed w-100 top-0 z-3">
         <motion.div
-          className="hamburger-container d-md-none"
-          animate={isOpen ? "open" : "closed"}
+          className="container d-flex justify-content-between align-items-center flex-wrap"
+          transition={{ duration: 0.6, staggerChildren: 0.1 }}
+          initial="initial"
+          animate="animate"
         >
-          <MenuToggle toggle={() => toggleOpen()} />
-        </motion.div>
-      </motion.div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.ul
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={ulVariants}
-            className="list-unstyled d-flex align-items-center mb-0 flex-column mt-5 justify-content-center w-100 d-md-none"
-          >
-            <motion.li
-              className="mb-3"
-              variants={variants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link to="about" className="text-white text-decoration-none p-3">
-                About us
-              </Link>
-            </motion.li>
-            <motion.li
-              className="mb-3"
-              variants={variants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to="products"
-                className="text-white text-decoration-none p-3"
+          <Logo />
+          <div className="d-none d-md-flex ">
+            <ul className="list-unstyled d-flex align-items-center mb-0">
+              <motion.li
+                variants={slideDownVariants}
+                whileHover={{ scale: 1.05 }}
               >
-                Products
-              </Link>
-            </motion.li>
-            <motion.li
-              className=""
-              variants={variants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+                <Link
+                  to="about"
+                  className="text-white text-decoration-none p-3"
+                >
+                  About us
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={slideDownVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link
+                  to="products"
+                  className="text-white text-decoration-none p-3"
+                >
+                  Products
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={slideDownVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Button color="white" className="ms-3 fs-7" icon={<CartIcon />}>
+                  Shop Products
+                </Button>
+              </motion.li>
+            </ul>
+          </div>
+
+          <motion.div
+            className="hamburger-container d-md-none"
+            animate={isOpen ? "open" : "closed"}
+          >
+            <MenuToggle toggle={() => toggleOpen()} />
+          </motion.div>
+        </motion.div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={ulVariants}
+              className="list-unstyled d-flex align-items-center mb-0 flex-column mt-5 justify-content-center w-100 d-md-none"
             >
-              <Button color="white" className="ms-3 fs-7" icon={<CartIcon />}>
-                Shop Products
-              </Button>
-            </motion.li>
-          </motion.ul>
-        )}
-      </AnimatePresence>
-    </nav>
+              <motion.li
+                className="mb-3"
+                variants={variants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="about"
+                  className="text-white text-decoration-none p-3"
+                >
+                  About us
+                </Link>
+              </motion.li>
+              <motion.li
+                className="mb-3"
+                variants={variants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="products"
+                  className="text-white text-decoration-none p-3"
+                >
+                  Products
+                </Link>
+              </motion.li>
+              <motion.li
+                className=""
+                variants={variants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button color="white" className="ms-3 fs-7" icon={<CartIcon />}>
+                  Shop Products
+                </Button>
+              </motion.li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </nav>
+    </>
   );
 };
 

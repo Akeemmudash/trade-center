@@ -10,11 +10,11 @@ const GlobeBanner = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.7, once: true }}
-        className="overlay position-absolute w-100 h-100 d-flex bg-black bg-opacity-75 align-items-center justify-content-center text-white flex-column"
+        className="overlay position-absolute w-100 h-100 d-flex bg-black bg-opacity-75 align-items-center justify-content-center text-white flex-column px-2"
       >
         <motion.h2 className="fs-2 text-center" variants={itemVariants}>
           join a Community of Global Shoppers. join different shipment groups
-          across  different product categories.
+          across different product categories.
         </motion.h2>
         <div className="mt-3">
           <Button icon={<CartIcon />} color="white">

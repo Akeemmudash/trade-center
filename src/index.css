@@ -16,14 +16,6 @@
   --gray: #808080;
   --primary-dark: #232323;
 }
-@media (min-width: 1024px) and (max-width: 1400px) {
-  /* .padding-container {
-    padding-inline: calc(40px + 1vw) !important;
-  } */
-  .row > * {
-    padding-inline: 0 !important;
-  }
-}
 
 /* Background color utility classes */
 .bg-dark-red {
@@ -203,7 +195,7 @@ button {
 }
 
 .how-it-works .section_body {
-  margin-top: 105px;
+  margin-top: 135px;
 }
 .how-it-works .section_body .section_img {
   max-width: 500px;
@@ -212,7 +204,7 @@ button {
   margin-top: 105px;
 }
 .how-it-works_card {
-  height: 245px;
+  height: 190px;
 }
 
 .how-it-works_card .logo {
@@ -221,8 +213,10 @@ button {
   margin-bottom: 16px;
 }
 .how-it-works .bg-circle {
-  width: calc(400px + 2vw);
-  height: calc(400px + 2vw);
+  width: calc(220px + 20vw);
+  height: calc(220px + 20vw);
+  max-width: 420px;
+  max-height: 420px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--light-red);
@@ -230,28 +224,43 @@ button {
 .how-it-works .bg-circle::after,
 .how-it-works .bg-circle::before {
   content: "";
-  height: 153px;
-  width: calc(150px + 0.5vw);
+  height: calc(90px + 4vw);
+  width: calc(100px + 4vw);
   display: block;
   background-color: var(--light-pink);
   position: absolute;
 }
 .how-it-works .bg-circle::after {
-  right: -13%;
-  top: -10%;
+  right: -10%;
+  top: -5%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
 }
 .how-it-works .bg-circle::before {
-  left: -13%;
-  bottom: -10%;
+  left: -10%;
+  bottom: -5%;
   border-bottom-left-radius: 50%;
   border-top-right-radius: 50%;
 }
 .how-it-works .section_img {
-  width: 100%;
-  min-width: 395px;
+  width: 75%;
+  min-width: 305px;
 }
+.how-it-works_card .card_title {
+  font-size: 18px;
+}
+.how-it-works_card .card_description {
+  font-size: 14px;
+}
+@media screen and (max-width: 1199px) {
+  .how-it-works_card .card_title {
+    font-size: 16px;
+  }
+  .how-it-works_card .card_description {
+    font-size: 13px;
+  }
+}
+
 .why-choose-us .list-item {
   margin-bottom: 20px;
   line-height: 1.3;
@@ -273,11 +282,19 @@ button {
   max-height: calc(100dvh - 114px);
   height: calc(400px + 30vh);
 }
-
+.globe-banner h2 {
+  font-size: calc(1.5rem + 0.7vw);
+  line-height: 1.3;
+}
 .featured-product_card {
-  width: calc(270px + 0.2vw);
-  height: 394px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  aspect-ratio: 280/394;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 .featured-product_card:hover {
@@ -380,6 +397,12 @@ button {
 }
 .footer .payment-methods img {
   object-fit: contain;
+}
+
+@media screen and (max-width: 575px) {
+  .copyrights p {
+    font-size: 14px;
+  }
 }
 
 .hamburger {

@@ -15,8 +15,8 @@ const itemVariants = {
 };
 const Hero = () => {
   return (
-    <section className="hero ">
-      <div className="padding-container container row  h-100 mx-auto ">
+    <section className="hero">
+      <div className="container row h-100 mx-auto ">
         <div className="col-12 col-xl-6 h-100">
           <motion.header
             className="header "
@@ -30,17 +30,17 @@ const Hero = () => {
               Buying Wholesale{" "}
               <span className="text-bright-red">Quantities</span>
             </motion.h1>
-            <motion.p className="fw-medium fs-5 mt-4" variants={itemVariants}>
+            <motion.p className="fw-medium mt-4" variants={itemVariants}>
               Join our community and unlock access to wholesale prices on
               everyday essentials through shared bulk purchases.
             </motion.p>
-            <motion.div className="mt-4" variants={itemVariants}>
+            <motion.div className="my-4 " variants={itemVariants}>
               <Button icon={<CartIcon />}>Start Shopping</Button>
             </motion.div>
           </motion.header>
         </div>
         <motion.div
-          className=" col-xl-6 col-12 d-none position-relative  d-lg-block"
+          className=" col-xl-6 col-12 d-none position-relative  d-xl-block"
           initial={{ translateX: 400, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1 }}
           transition={{

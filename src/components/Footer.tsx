@@ -7,18 +7,28 @@ import visa from "../assets/payment-methods/Visa.png";
 import discover from "../assets/payment-methods/Discover.png";
 import mastercard from "../assets/payment-methods/Mastercard.png";
 import securePayment from "../assets/payment-methods/securePayment.png";
+import { motion } from "framer-motion";
+import { itemVariants } from "./TrustedBy";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <section className="padding-container   align-items-center  ">
-        <div className=" container-xxl d-flex justify-content-between flex-wrap">
+      <motion.section
+        className=" "
+        transition={{ staggerChildren: 0.3 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3, once: true }}
+      >
+        <div className=" container d-flex justify-content-between flex-wrap">
           <div className="col-lg-4 col-md-6">
-            <h3 className="fs-4 fw-semibold">Subscribe our Newsletter</h3>
-            <p className="fs-7 text-gray">
+            <motion.h3 variants={itemVariants} className="fs-4 fw-semibold">
+              Subscribe our Newsletter
+            </motion.h3>
+            <motion.p variants={itemVariants} className="fs-7 text-gray">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               ipsum quis nemo eaque.
-            </p>
+            </motion.p>
           </div>
           <div className="subscribe col-lg-4 col-md-6 d-flex  position-relative gap-5 ">
             {" "}
@@ -120,9 +130,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className=" padding-container  text-gray">
-        <div className="container-xxl">
+      </motion.section>
+      <motion.section
+        className="text-gray"
+        transition={{ staggerChildren: 0.3 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3, once: true }}
+      >
+        <div className="container">
           <div className="d-flex mx-0 flex-wrap gap-5 justify-content-between">
             <div
               className="flex-grow-1 "
@@ -142,7 +158,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="d-flex gap-5 flex-wrap">
-              <div className="">
+              <motion.div variants={itemVariants} className="">
                 <h6 className="text-white fw-semibold">My Account</h6>
                 <ul className="ms-0 list-unstyled ps-0 lh-lg fs-7">
                   <li>
@@ -166,8 +182,8 @@ const Footer = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div variants={itemVariants} className="">
                 <h6 className="text-white fw-semibold">Helps</h6>
                 <ul className="ms-0 list-unstyled ps-0 lh-lg fs-7">
                   <li>
@@ -191,8 +207,8 @@ const Footer = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div variants={itemVariants} className="">
                 <h6 className="text-white fw-semibold">Proxy</h6>
                 <ul className="ms-0 list-unstyled ps-0 lh-lg fs-7">
                   <li>
@@ -216,8 +232,8 @@ const Footer = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div variants={itemVariants} className="">
                 <h6 className="text-white fw-semibold">Categories</h6>
                 <ul className="ms-0 list-unstyled ps-0 lh-lg fs-7">
                   <li>
@@ -241,13 +257,13 @@ const Footer = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
           <hr />
           <div className="">
-            <div className="copyrights d-flex flex-wrap justify-content-between align-items-center">
-              <p className="mb-0">
+            <div className="copyrights d-flex flex-wrap justify-content-between align-items-center ">
+              <p className="mb-2 mb-lg-0">
                 Trade Center eCommerce © 2021. All Rights Reserved
               </p>
               <div className="payment-methods d-flex gap-2 flex-wrap">
@@ -260,7 +276,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </footer>
   );
 };
