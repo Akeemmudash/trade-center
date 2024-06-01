@@ -15,6 +15,7 @@
   --medium-gray: #999;
   --gray: #808080;
   --primary-dark: #232323;
+  --nav-height: 114px;
 }
 
 /* Background color utility classes */
@@ -142,6 +143,8 @@
 
 .nav {
   padding: 26px 0;
+  transition: height 0.3s ease-in;
+  height: var(--nav-height);
 }
 
 body {

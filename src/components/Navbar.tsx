@@ -24,10 +24,12 @@ const variants = {
 };
 const ulVariants = {
   open: {
+    height: 300,
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    height: 0,
+    transition: { staggerChildren: 0.05, staggerDirection: -1, delay: 0.4 },
   },
 };
 const slideDownVariants = {
@@ -98,7 +100,7 @@ const Navbar = () => {
               animate="open"
               exit="closed"
               variants={ulVariants}
-              className="list-unstyled d-flex align-items-center mb-0 flex-column mt-5 justify-content-center w-100 d-md-none"
+              className="list-unstyled d-flex align-items-center mb-0 flex-column mt-3 justify-content-center w-100 d-md-none bg-bright-red"
             >
               <motion.li
                 className="mb-3"
