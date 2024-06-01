@@ -1,6 +1,6 @@
-import { MotionProps, motion } from "framer-motion";
+import { SVGMotionProps, motion } from "framer-motion";
 
-const Path = (props: MotionProps) => (
+const Path = (props: SVGMotionProps<SVGPathElement>) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
