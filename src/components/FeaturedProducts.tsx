@@ -16,10 +16,7 @@ const FeaturedProducts = () => {
   return (
     <motion.section
       className="featured-product container"
-      transition={{ staggerChildren: 0.3 }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.3, once: true }}
+      transition={{ delayChildren: 0.3 }}
     >
       <motion.h2 variants={itemVariants} className="section_heading">
         Featured Products
@@ -104,6 +101,10 @@ const FeaturedProductsCard = ({
   return (
     <motion.div
       variants={itemVariants}
+      transition={{ staggerChildren: 0.3 }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3, once: true }}
       className={clsx(
         "featured-product_card rounded-3 py-4",
         bgColor,

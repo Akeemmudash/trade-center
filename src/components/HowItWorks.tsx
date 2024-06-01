@@ -15,9 +15,6 @@ const HowItWorks = () => {
   return (
     <motion.section
       transition={{ staggerChildren: 0.3 }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.3, once: true }}
       className="how-it-works container"
     >
       <h2 className="section_heading">How it Works</h2>
@@ -72,6 +69,9 @@ export const HowItWorksCard = ({
   return (
     <motion.div
       variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3, once: true }}
       className="how-it-works_card col-6 d-flex align-items-center flex-column text-center w-100"
     >
       <div className="logo rounded-circle bg-light-pink d-flex align-items-center justify-content-center">

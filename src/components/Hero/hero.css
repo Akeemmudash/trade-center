@@ -25,8 +25,8 @@
 
 .hero .header {
   margin-top: var(--header-margin-top);
-  height: calc(100dvh - var(--header-margin-top));
-  max-height: calc(690px);
+  height: calc(100dvh - var(--header-margin-top) - 71px);
+  max-height: calc(630px);
 }
 
 .hero_wave img {
