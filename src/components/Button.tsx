@@ -26,7 +26,7 @@ const Button = ({
       )}
       {...props}
     >
-      <span className="d-flex align-items-center">
+      <span className="|">
         {children} {Boolean(icon) && <span className="ms-2">{icon}</span>}
       </span>
     </button>

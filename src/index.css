@@ -282,7 +282,7 @@ button {
 }
 .globe-banner {
   background: url("/src/assets/globe-banner.png"), var(--primary-dark);
-  max-height: calc(100dvh - 114px);
+  max-height: calc(100vh - 114px);
   height: calc(400px + 30vh);
 }
 .globe-banner h2 {
@@ -291,17 +291,16 @@ button {
 }
 .featured-product_card {
   width: 100%;
-  margin-bottom: 30px;
-
+  margin-bottom: 40px;
   aspect-ratio: 280/394;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 .featured-product_card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: scale(1.2);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -330,7 +329,7 @@ button {
 }
 @media screen and (max-width: 991px) {
   .footer > section:nth-child(1) > div > div:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   .footer .subscribe {
     width: auto;

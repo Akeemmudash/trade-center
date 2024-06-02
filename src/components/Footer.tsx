@@ -21,8 +21,8 @@ const Footer = () => {
         viewport={{ amount: 0.3, once: true }}
       >
         <div className=" container d-flex justify-content-between flex-wrap">
-          <div className="col-lg-4 col-md-6">
-            <motion.h3 variants={itemVariants} className="fs-4 fw-semibold">
+          <div className="col-lg-4 col-md-6 text-center text-lg-start ">
+            <motion.h3 variants={itemVariants} className="fs-4 fw-semibold ">
               Subscribe our Newsletter
             </motion.h3>
             <motion.p variants={itemVariants} className="fs-7 text-gray">
@@ -43,7 +43,7 @@ const Footer = () => {
               Subscribe
             </Button>
           </div>
-          <div className="col-lg-2 d-flex align-items-start justify-content-end gap-2">
+          <div className="col-lg-2 d-flex align-items-start justify-content-end  gap-3 gap-lg-2">
             <div className="social-link flex-shrink-0">
               <Link
                 to="#"

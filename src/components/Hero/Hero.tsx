@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container row h-100 mx-auto ">
-        <div className="col-12 col-xl-6 h-100">
+        <div className=" header_container col-12 col-lg-6 ">
           <motion.header
             className="header "
             transition={{ staggerChildren: 0.3 }}
@@ -35,12 +35,14 @@ const Hero = () => {
               everyday essentials through shared bulk purchases.
             </motion.p>
             <motion.div className="my-4 " variants={itemVariants}>
-              <Button icon={<CartIcon />}>Start Shopping</Button>
+              <Button icon={<CartIcon />} className="hero_button">
+                Start Shopping
+              </Button>
             </motion.div>
           </motion.header>
         </div>
         <motion.div
-          className=" col-xl-6 col-12 d-none position-relative  d-xl-block"
+          className="hero_banner col-lg-6 col-12 position-relative  user-select-none "
           initial={{ translateX: 400, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1 }}
           transition={{

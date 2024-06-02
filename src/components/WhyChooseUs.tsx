@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
       <div className=" section_body row align-items-center">
         <div className="col-lg-6 col-12">
           <div className="">
-            <h2 className="section_heading mb-3 text-start">
+            <h2 className="section_heading mb-lg-3 text-center text-lg-start">
               Why <span className="text-bright-red">Choose</span> Us
             </h2>
             <motion.ul
