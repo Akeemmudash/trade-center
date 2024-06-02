@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
             </motion.div>
             <motion.div
               variants={itemVariants}
-              className="col-10 ms-auto mt-3 "
+              className="col-10  mx-auto me-lg-0 mt-3 "
             >
               <img src={largeImage} alt="" className="large_img w-100" />
             </motion.div>
