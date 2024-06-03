@@ -43,7 +43,7 @@ const Footer = () => {
               Subscribe
             </Button>
           </div>
-          <div className="col-md-2 col-sm-4 mx-auto mx-sm-0 col-6 d-flex align-items-start justify-content-lg-start justify-content-between  gap-3 gap-lg-2">
+          <div className="col-md-3 col-lg-2 col-sm-4 mx-auto mx-sm-0 col-6 d-flex align-items-center align-items-lg-start justify-content-lg-start justify-content-between  gap-3 gap-lg-2">
             <div className="social-link flex-shrink-0">
               <Link
                 to="#"

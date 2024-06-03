@@ -281,9 +281,10 @@ button {
   text-align: center;
 }
 .globe-banner {
-  background: url("/src/assets/globe-banner.png"), var(--primary-dark);
+  background: url("/src/assets/globe-banner.png") no-repeat, var(--primary-dark);
   max-height: calc(100vh - 114px);
   height: calc(400px + 30vh);
+  background-size: cover;
 }
 .globe-banner h2 {
   font-size: calc(1.5rem + 0.7vw);
@@ -324,13 +325,13 @@ button {
   height: 56px;
   box-shadow: none;
   border: 1px solid var(--medium-gray);
-  padding-inline: 1.8em 4em;
+  padding-inline: 1.8em 9.5em;
   width: 100%;
 }
 @media screen and (max-width: 991px) {
-  .footer > section:nth-child(1) > div > div:not(:last-child) {
+  /* .footer > section:nth-child(1) > div > div:not(:last-child) {
     margin-bottom: 24px;
-  }
+  } */
   .footer .subscribe {
     width: auto;
     min-width: 353px;
@@ -341,6 +342,11 @@ button {
   }
   .footer .subscribe_button {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer > section:nth-child(1) > div > div:not(:last-child) {
+    margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 575px) {
