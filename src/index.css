@@ -216,8 +216,8 @@ button {
   margin-bottom: 16px;
 }
 .how-it-works .bg-circle {
-  width: calc(220px + 20vw);
-  height: calc(220px + 20vw);
+  width: calc(180px + 25vw);
+  height: calc(180px + 25vw);
   max-width: 420px;
   max-height: 420px;
   left: 50%;
@@ -329,9 +329,6 @@ button {
   width: 100%;
 }
 @media screen and (max-width: 991px) {
-  /* .footer > section:nth-child(1) > div > div:not(:last-child) {
-    margin-bottom: 24px;
-  } */
   .footer .subscribe {
     width: auto;
     min-width: 353px;
@@ -344,11 +341,31 @@ button {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 991px) {
+  .footer .subscribe {
+    width: auto;
+    min-width: 353px;
+  }
+  .footer .subscribe_input {
+    height: 49px;
+    font-size: 14px;
+  }
+  .footer .subscribe_button {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .how-it-works .section_img {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer > section:nth-child(1) > div > div:not(:last-child) {
     margin-bottom: 24px;
   }
 }
+
 @media screen and (max-width: 575px) {
   .footer .subscribe {
     width: auto;

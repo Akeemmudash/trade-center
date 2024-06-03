@@ -134,7 +134,7 @@
     z-index: 1;
   }
   .hero_wave img {
-    transform: translateX(calc(428px + 6vh));
+    transform: translateX(calc(428px + 23vw));
     height: 100%;
   }
   /* .hero_img > img {
